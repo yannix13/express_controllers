@@ -2,7 +2,7 @@ const request = require("supertest");
 const database = require("../database")
 
 
-const app = require("../src/app");
+const app = require("../index.js");
 
 describe("GET /api/movies", () => {
   it("should return all movies", async () => {

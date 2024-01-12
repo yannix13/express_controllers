@@ -1,6 +1,7 @@
 
 const database = require("../../database")
 
+
 const getMovies = (req, res) => {
   const initialSql = "select * from movies";
   const where = [];

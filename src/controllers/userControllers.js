@@ -27,6 +27,7 @@ const getUsers = (req, res) => {
           }, initialSql), 
           where.map(({ value }) => value))
       .then(([users]) => {
+        //res.setHeader('Content-Type', 'application/json')
         res.json(users);
       })
     .catch((err) => {
@@ -47,6 +48,7 @@ const getUserById = (req, res) => {
      
       if(result[0] != null){
         //console.log("exist");
+      //  res.setHeader('Content-Type', 'application/json')
         res.status(200).json(result[0]);
       }else{
        // console.log("doesn't exist");
