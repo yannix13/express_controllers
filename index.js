@@ -17,6 +17,8 @@ const validateUser = require("./src/middleware/validateUser")
 app.get("/api/movies", movieControllers.getMovies);
 app.get("/api/movies/:id", movieControllers.getMovieById);
 
+app.delete("/api/movies/:id", movieControllers.deleteMovie);
+
 app.post("/api/movies", validateMovie, movieControllers.postMovie);
 
 app.put("/api/movies/:id", movieControllers.updateMovie)
